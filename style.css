@@ -67,6 +67,7 @@ body {
     position: relative;
     box-shadow: inset 0 0 100px rgba(0,0,0,0.1);
     
+    
 }
 
 .news-window {
@@ -141,4 +142,69 @@ body {
     border-color: #d4af37;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* categorias */
+
+.categorias {
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    align-items: center;
+    gap: 120px; /* Espaço grande entre eles para dar ar premium */
+    padding: 80px 0;
+    background-color: #FFFFFF; /* Fundo bem escuro/marrom café igual da foto */
+    width: 100%;
+    border-top: 1px solid #f0f0f0;
+}
+
+.categoria-item {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.categoria-item:hover {
+    transform: translateY(-10px); /* Sobe um pouquinho no hover */
+}
+
+.icone {
+    font-size: 40px; /* Tamanho do ícone */
+    display: block;
+    margin-bottom: 15px;
+    filter: sepia(1) saturate(5) hue-rotate(10deg);
+    color: #d4af37;
+    filter: none; /* Truque para deixar emoji meio dourado */
+}
+
+.categoria-item p {
+    color: #2c2c2c;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px; /* Segredo do luxo de novo */
+    font-weight: 300;
+}
+
+/* Linha dourada embaixo do nome ao passar o mouse */
+.categoria-item p::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #d4af37;
+    transition: width .3s;
+    margin: 5px auto 0;
+}
+
+.categoria-item:hover p::after {
+    width: 100%;
+}
+
+/* Efeito de hover */
+.categoria-item:hover {
+    transform: translateY(-5px);
+}
+
+.categoria-item:hover p {
+    color: #d4af37; /* Nome fica dourado no hover */
 }
