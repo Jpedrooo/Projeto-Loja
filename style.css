@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff; /* Fundo limpo */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+
+/*cabecario*/
+.cabecario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px; /* Aumentei um pouco o respiro */
+    height: 100px; /* Um pouco mais alto para dar elegância */
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0; /* Linha bem fininha e discreta */
+}
+
+.titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #1a1a1a;
+    letter-spacing: -1px; /* Letras levemente mais juntas = mais moderno */
+    margin-left: -150px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #888; /* Cinza mais suave */
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem; /* Menor e mais delicado */
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Espaçamento maior entre letras dá ar de marca premium */
+    transition: color 0.3s ease;
+    margin-right: 50px;
+}
+
+
+.menu a:hover {
+    color: #d4af37; /* Dourado ao passar o mouse */
+}
+/*banner*/
+.banner.news-banner {
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+    height: 700px;
+    background: url('./banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    /* Centraliza a janela de vidro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.1);
+    
+}
+
+.news-window {
+    background: rgba(255, 255, 240, 0.4); /* Fundo bege suave e semi-transparente */
+    backdrop-filter: blur(15px); /* O verdadeiro efeito de desfoque */
+    -webkit-backdrop-filter: blur(15px); /* Suporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda dourada/branca fininha */
+    border-radius: 60px; /* Formato pílula grande */
+    padding: 60px; /* Espaço interno generoso */
+    max-width: 750px; /* Largura controlada */
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombra suave para flutuar */
+    
+    /* Centraliza o conteúdo interno (texto e botão) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.news-content {
+    /* max-width: 650px; -- Removido, controlado pela janela */
+    text-align: center;
+    color: white; /* Texto claro sobre o fundo desfocado */
+    margin-bottom: 40px; /* Espaço menor até o botão */
+    line-height: 1.6;
+}
+.news-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.news-title .highlight {
+    color: #d4af37;
+    display: block;
+}
+
+.news-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9); /* Branco mais forte para leitura */
+    font-weight: 300;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.btnBanner {
+    /* Remova o margin-top fixo */
+    min-width: 180px;
+    text-align: center;
+    padding: 14px 40px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    
+    /* Seu estilo de botão de vidro anterior, ajustado */
+    background: rgba(255, 255, 240, 0.6); 
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    
+    color: #333; /* Cor de texto escura para contraste */
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.btnBanner:hover {
+    background: linear-gradient(135deg, #d4af37, #b8860b);
+    color: white;
+    border-color: #d4af37;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
