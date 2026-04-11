@@ -168,7 +168,7 @@ body {
 }
 
 .icone {
-    font-size: 40px; /* Tamanho do ícone */
+    font-size: 60px; /* Tamanho do ícone */
     display: block;
     margin-bottom: 15px;
     filter: sepia(1) saturate(5) hue-rotate(10deg);
@@ -207,4 +207,263 @@ body {
 
 .categoria-item:hover p {
     color: #d4af37; /* Nome fica dourado no hover */
+}
+/*cards*/
+.best-sellers-wide {
+    display: flex;
+    align-items: flex-start;
+    padding: 80px 10%;
+    gap: 50px;
+    background-color: #fff;
+}
+
+/* Título na Esquerda */
+.title-container h2 {
+    font-family: 'Serif', serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #1a1510;
+    margin: 0;
+}
+
+.line {
+    width: 40px;
+    height: 3px;
+    background: #c5a66d;
+    margin-top: 15px;
+}
+
+/* Card Horizontal */
+.horizontal-card {
+    flex: 1;
+    background: #fdfdfd;
+    border: 1px solid #f0f0f0;
+    position: relative;
+    border-radius: 4px;
+    transition: transform 0.4s ease;
+}
+
+.horizontal-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+}
+
+.badge-wide {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #c5a66d;
+    font-weight: bold;
+}
+
+.product-image-wide img {
+    width: 350px;
+    height: auto;
+    object-fit: contain;
+}
+
+.product-details {
+    padding-left: 50px;
+    text-align: left;
+}
+
+.brand {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-family: 'Serif', serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #1a1510;
+}
+
+.description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.price-action {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #c5a66d;
+}
+
+.btn-primary {
+    background: #1a1510;
+    color: #fff;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #c5a66d;
+}
+
+/* Responsividade Básica */
+@media (max-width: 992px) {
+    .best-sellers-wide {
+        flex-direction: column;
+    }
+    .card-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .product-details {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+    .price-action {
+        justify-content: center;
+    }
+}
+
+.best-sellers-wide-second{
+    display: flex;
+    align-items: flex-start;
+    padding: 80px 10%;
+    gap: 50px;
+    background-color: #fff;
+    
+    
+}
+.horizontal-card-second {
+    width: 100%;
+    background: #fdfdfd;
+    border: 1px solid #f0f0f0;
+    position: relative;
+    border-radius: 4px;
+    transition: transform 0.4s ease;
+}
+/*RODAPÉ*/
+.main-footer {
+    background-color: #1a1510;
+    color: #fff;
+    padding: 60px 10% 20px 10%;
+    margin-top: 80px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    font-family: 'Serif', serif;
+    font-size: 1.8rem;
+    color: #c5a66d; /* Dourado */
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    color: #c5a66d;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #bbb;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #c5a66d;
+    padding-left: 5px;
+}
+
+/* Newsletter Input */
+.footer-subscribe {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-subscribe input {
+    background: transparent;
+    border: 1px solid #333;
+    padding: 10px;
+    color: #fff;
+    flex: 1;
+}
+
+.footer-subscribe button {
+    background: #c5a66d;
+    border: none;
+    color: #1a1510;
+    padding: 0 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.footer-col a {
+    color: #bbb; /* Ou a cor que você preferir (ex: white) */
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-col a:visited {
+    color: #bbb;
+}
+.footer-col a:hover {
+    color: #c5a66d; /* Dourado para combinar com o logo */
 }
