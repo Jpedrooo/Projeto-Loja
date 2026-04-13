@@ -62,7 +62,7 @@ body {
     max-width: 100%;
     overflow: hidden;
     height: 700px;
-    background: url('./banner.png') no-repeat center / cover;
+    background: url('./fotos/banner.png') no-repeat center / cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,6 +160,8 @@ body {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease;
+    text-decoration: none;
+    color: inherit;
 }
 
 .categoria-item:hover {

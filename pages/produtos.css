@@ -1,0 +1,318 @@
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+/* ============================================
+   CABEÇÁRIO
+   ============================================ */
+.cabecario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    height: 100px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+    margin-left: -150px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #888;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: color 0.3s ease;
+    margin-right: 50px;
+}
+
+.menu a:hover {
+    color: #d4af37;
+}
+
+
+/* ============================================
+   PÁGINA DE PRODUTOS
+   ============================================ */
+.produtos-page {
+    padding: 80px 10%;
+}
+
+.produtos-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.produtos-subtitulo {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #c5a66d;
+    margin-bottom: 12px;
+}
+
+.produtos-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1a1510;
+    margin: 0 0 20px 0;
+}
+
+.linha-dourada {
+    width: 50px;
+    height: 2px;
+    background: #c5a66d;
+    margin: 0 auto;
+}
+
+
+/* ============================================
+   GRID DE PRODUTOS
+   ============================================ */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.produto-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fdfdfd;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
+}
+
+/* Imagem */
+.produto-imagem {
+    width: 100%;
+    height: 380px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* <- encaixa a imagem sem cortar */
+    padding: 20px;        /* pequeno respiro nas bordas */
+    transition: transform 0.6s ease;
+}
+
+.produto-card:hover .produto-imagem img {
+    transform: scale(1.04);
+}
+
+/* Info */
+.produto-info {
+    padding: 35px 40px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.produto-marca {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #aaa;
+    margin: 0 0 8px 0;
+}
+
+.produto-nome {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #1a1510;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+}
+
+.produto-descricao {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.7;
+    margin: 0 0 30px 0;
+    flex: 1;
+}
+
+/* Rodapé do card */
+.produto-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 25px;
+}
+
+.produto-preco {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #c5a66d;
+    font-family: 'Playfair Display', serif;
+}
+
+.btn-card {
+    background: #1a1510;
+    color: #fff;
+    padding: 12px 28px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 2px;
+}
+
+.btn-card:hover {
+    background: #c5a66d;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecario {
+        padding: 0 30px;
+    }
+
+    .titulo {
+        margin-left: 0;
+    }
+}
+
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
+.main-footer {
+    background-color: #1a1510;
+    color: #fff;
+    padding: 60px 10% 20px 10%;
+    margin-top: 80px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    font-family: 'Serif', serif;
+    font-size: 1.8rem;
+    color: #c5a66d;
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    color: #c5a66d;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #bbb;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a,
+.footer-col a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s, padding-left 0.3s;
+}
+
+.footer-col ul li a:hover,
+.footer-col a:hover {
+    color: #c5a66d;
+    padding-left: 5px;
+}
+
+.footer-subscribe {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-subscribe input {
+    background: transparent;
+    border: 1px solid #333;
+    padding: 10px;
+    color: #fff;
+    flex: 1;
+}
+
+.footer-subscribe button {
+    background: #c5a66d;
+    border: none;
+    color: #1a1510;
+    padding: 0 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+}
