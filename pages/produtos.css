@@ -16,6 +16,14 @@ body {
 
 
 /* ============================================
+   CHECKBOXES 
+   ============================================ */
+.chk-produto {
+    display: none;
+}
+
+
+/* ============================================
    CABEÇÁRIO
    ============================================ */
 .cabecario {
@@ -26,6 +34,9 @@ body {
     height: 100px;
     background-color: #fff;
     border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .titulo {
@@ -49,8 +60,19 @@ body {
     margin-right: 50px;
 }
 
-.menu a:hover {
+.menu a:hover,
+.carrinho-btn:hover {
     color: #d4af37;
+}
+
+.carrinho-btn {
+    text-decoration: none;
+    color: #888;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: color 0.3s ease;
 }
 
 
@@ -114,7 +136,6 @@ body {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.07);
 }
 
-/* Imagem */
 .produto-imagem {
     width: 100%;
     height: 380px;
@@ -128,8 +149,8 @@ body {
 .produto-imagem img {
     width: 100%;
     height: 100%;
-    object-fit: contain;  /* <- encaixa a imagem sem cortar */
-    padding: 20px;        /* pequeno respiro nas bordas */
+    object-fit: contain;
+    padding: 20px;
     transition: transform 0.6s ease;
 }
 
@@ -137,7 +158,6 @@ body {
     transform: scale(1.04);
 }
 
-/* Info */
 .produto-info {
     padding: 35px 40px;
     display: flex;
@@ -169,7 +189,6 @@ body {
     flex: 1;
 }
 
-/* Rodapé do card */
 .produto-rodape {
     display: flex;
     align-items: center;
@@ -185,6 +204,7 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+
 .btn-card {
     background: #1a1510;
     color: #fff;
@@ -197,6 +217,7 @@ body {
     letter-spacing: 2px;
     transition: background 0.3s ease, transform 0.2s ease;
     border-radius: 2px;
+    display: inline-block;
 }
 
 .btn-card:hover {
@@ -204,19 +225,202 @@ body {
     transform: translateY(-1px);
 }
 
-@media (max-width: 900px) {
-    .produtos-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .cabecario {
-        padding: 0 30px;
-    }
-
-    .titulo {
-        margin-left: 0;
-    }
+#chk1:checked ~ main .produto-card:nth-child(1) .btn-card,
+#chk2:checked ~ main .produto-card:nth-child(2) .btn-card,
+#chk3:checked ~ main .produto-card:nth-child(3) .btn-card,
+#chk4:checked ~ main .produto-card:nth-child(4) .btn-card,
+#chk5:checked ~ main .produto-card:nth-child(5) .btn-card,
+#chk6:checked ~ main .produto-card:nth-child(6) .btn-card {
+    background: #c5a66d;
+    color: #fff;
 }
+
+
+/* ============================================
+   CARRINHO
+   ============================================ */
+.carrinho-section {
+    padding: 80px 10%;
+    background-color: #fafafa;
+    border-top: 1px solid #f0f0f0;
+}
+
+.carrinho-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.carrinho-header .linha-dourada {
+    margin: 0 auto;
+}
+
+
+.carrinho-vazio {
+    text-align: center;
+    padding: 60px 0;
+    color: #aaa;
+    font-size: 0.95rem;
+    display: block;
+}
+
+.carrinho-vazio p {
+    margin-bottom: 20px;
+}
+
+.btn-voltar {
+    text-decoration: none;
+    color: #1a1510;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #c5a66d;
+    padding-bottom: 3px;
+    transition: color 0.3s;
+}
+
+.btn-voltar:hover {
+    color: #c5a66d;
+}
+
+
+.carrinho-lista {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.carrinho-item {
+    display: none;
+    align-items: center;
+    gap: 25px;
+    padding: 25px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.carrinho-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: #f9f9f9;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.carrinho-item-info {
+    flex: 1;
+}
+
+.carrinho-marca {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #aaa;
+    margin: 0 0 5px 0;
+}
+
+.carrinho-nome {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #1a1510;
+    margin: 0;
+}
+
+.carrinho-preco {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #c5a66d;
+    font-family: 'Playfair Display', serif;
+    min-width: 100px;
+    text-align: right;
+}
+
+.btn-remover {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #bbb;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+    padding-bottom: 2px;
+}
+
+.btn-remover:hover {
+    color: #c5a66d;
+    border-bottom-color: #c5a66d;
+}
+
+
+.carrinho-finalizar {
+    display: none;
+    justify-content: flex-end;
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.btn-finalizar {
+    background: #1a1510;
+    color: #fff;
+    padding: 16px 50px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: background 0.3s ease;
+    border-radius: 2px;
+}
+
+.btn-finalizar:hover {
+    background: #c5a66d;
+}
+
+
+/* ============================================
+   LÓGICA DO CARRINHO — CSS puro via :checked
+   ============================================ */
+
+
+#chk1:checked ~ .carrinho-section .carrinho-lista,
+#chk2:checked ~ .carrinho-section .carrinho-lista,
+#chk3:checked ~ .carrinho-section .carrinho-lista,
+#chk4:checked ~ .carrinho-section .carrinho-lista,
+#chk5:checked ~ .carrinho-section .carrinho-lista,
+#chk6:checked ~ .carrinho-section .carrinho-lista {
+    display: flex;
+}
+
+#chk1:checked ~ .carrinho-section .carrinho-vazio,
+#chk2:checked ~ .carrinho-section .carrinho-vazio,
+#chk3:checked ~ .carrinho-section .carrinho-vazio,
+#chk4:checked ~ .carrinho-section .carrinho-vazio,
+#chk5:checked ~ .carrinho-section .carrinho-vazio,
+#chk6:checked ~ .carrinho-section .carrinho-vazio {
+    display: none;
+}
+
+
+#chk1:checked ~ .carrinho-section .carrinho-finalizar,
+#chk2:checked ~ .carrinho-section .carrinho-finalizar,
+#chk3:checked ~ .carrinho-section .carrinho-finalizar,
+#chk4:checked ~ .carrinho-section .carrinho-finalizar,
+#chk5:checked ~ .carrinho-section .carrinho-finalizar,
+#chk6:checked ~ .carrinho-section .carrinho-finalizar {
+    display: flex;
+}
+
+
+#chk1:checked ~ .carrinho-section #item1 { display: flex; }
+#chk2:checked ~ .carrinho-section #item2 { display: flex; }
+#chk3:checked ~ .carrinho-section #item3 { display: flex; }
+#chk4:checked ~ .carrinho-section #item4 { display: flex; }
+#chk5:checked ~ .carrinho-section #item5 { display: flex; }
+#chk6:checked ~ .carrinho-section #item6 { display: flex; }
 
 
 /* ============================================
@@ -226,7 +430,6 @@ body {
     background-color: #1a1510;
     color: #fff;
     padding: 60px 10% 20px 10%;
-    margin-top: 80px;
     font-family: Arial, sans-serif;
 }
 
@@ -315,4 +518,24 @@ body {
     text-align: center;
     font-size: 0.8rem;
     color: #666;
+}
+
+.footer-bottom p + p {
+    margin-top: 6px;
+    font-size: 0.75rem;
+    color: #444;
+}
+
+@media (max-width: 900px) {
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecario {
+        padding: 0 30px;
+    }
+
+    .titulo {
+        margin-left: 0;
+    }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +9,29 @@
 </head>
 <body>
 
+    
+    <input type="checkbox" id="chk1" class="chk-produto">
+    <input type="checkbox" id="chk2" class="chk-produto">
+    <input type="checkbox" id="chk3" class="chk-produto">
+    <input type="checkbox" id="chk4" class="chk-produto">
+    <input type="checkbox" id="chk5" class="chk-produto">
+    <input type="checkbox" id="chk6" class="chk-produto">
+
+    <!-- ===== CABECARIO ===== -->
     <header class="cabecario">
         <nav class="menu">
-            <a href="#">Produtos</a>
-            <a href="#">Saiba Mais</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="saibaMais.html">Saiba Mais</a>
         </nav>
-        <h1 class="titulo">L'Essence d'Or</h1>
+        <a href="../index.html" style="text-decoration: none;">
+            <h1 class="titulo">L'Essence d'Or</h1>
+        </a>
         <nav class="menu">
-            <a class="carrinho" href="#">Carrinho</a>
+            <a class="carrinho-btn" href="#carrinho">Carrinho</a>
         </nav>
     </header>
 
+    <!-- ===== PRODUTOS ===== -->
     <main class="produtos-page">
 
         <div class="produtos-header">
@@ -32,7 +44,7 @@
 
             <div class="produto-card">
                 <div class="produto-imagem">
-                    <img src="../fotos/LeMale.png" alt="Paco Rabanne Phantom">
+                    <img src="../fotos/LeMale.png" alt="Le Male Elixir">
                 </div>
                 <div class="produto-info">
                     <p class="produto-marca">Jean Paul Gaultier</p>
@@ -40,22 +52,22 @@
                     <p class="produto-descricao">Uma fragrância intensa e viciante que mistura o frescor da lavanda e hortelã com a profundidade quente do mel e da fava tonka; o equilíbrio perfeito entre sedução e elegância.</p>
                     <div class="produto-rodape">
                         <span class="produto-preco">R$ 600,00</span>
-                        <button class="btn-card">Adicionar à Sacola</button>
+                        <label for="chk1" class="btn-card">Adicionar à Sacola</label>
                     </div>
                 </div>
             </div>
 
             <div class="produto-card">
                 <div class="produto-imagem">
-                    <img src="../fotos/versace.png" alt="Bleu de Chanel">
+                    <img src="../fotos/versace.png" alt="Versace Eros">
                 </div>
                 <div class="produto-info">
                     <p class="produto-marca">Versace</p>
                     <h3 class="produto-nome">Versace Eros</h3>
-                    <p class="produto-descricao">Inspirado na mitologia grega, é uma fragrância intensa e vibrante que combina o frescor das folhas de hortelã e raspas de limão siciliano com a doçura viciante da baunilha e do ambroxan. Um perfume feito para homens fortes e apaixonados.</p>
+                    <p class="produto-descricao">Inspirado na mitologia grega, é uma fragrância intensa e vibrante que combina o frescor das folhas de hortelã e raspas de limão siciliano com a doçura viciante da baunilha e do ambroxan.</p>
                     <div class="produto-rodape">
                         <span class="produto-preco">R$ 649,00</span>
-                        <button class="btn-card">Adicionar à Sacola</button>
+                        <label for="chk2" class="btn-card">Adicionar à Sacola</label>
                     </div>
                 </div>
             </div>
@@ -70,7 +82,7 @@
                     <p class="produto-descricao">Selvagem e refinado ao mesmo tempo. Abertura explosiva de bergamota com coração de pimenta e base de ambroxan.</p>
                     <div class="produto-rodape">
                         <span class="produto-preco">R$ 850,00</span>
-                        <button class="btn-card">Adicionar à Sacola</button>
+                        <label for="chk3" class="btn-card">Adicionar à Sacola</label>
                     </div>
                 </div>
             </div>
@@ -85,7 +97,7 @@
                     <p class="produto-descricao">Inspirado no frescor do Mediterrâneo, traz notas aquáticas, bergamota e jasmim em uma composição leve e elegante.</p>
                     <div class="produto-rodape">
                         <span class="produto-preco">R$ 720,00</span>
-                        <button class="btn-card">Adicionar à Sacola</button>
+                        <label for="chk4" class="btn-card">Adicionar à Sacola</label>
                     </div>
                 </div>
             </div>
@@ -100,12 +112,12 @@
                     <p class="produto-descricao">Fragrância moderna e ousada com notas de limão siciliano, lavanda cremosa e base quente de baunilha e madeiras ambaradas.</p>
                     <div class="produto-rodape">
                         <span class="produto-preco">R$ 600,00</span>
-                        <button class="btn-card">Adicionar à Sacola</button>
+                        <label for="chk5" class="btn-card">Adicionar à Sacola</label>
                     </div>
                 </div>
             </div>
 
-             <div class="produto-card">
+            <div class="produto-card">
                 <div class="produto-imagem">
                     <img src="https://www.chanel.com/images/t_one/w_0.51,h_0.51,c_crop/q_auto:good,f_autoplus,fl_lossy,dpr_1.1/w_1240/bleu-de-chanel-eau-de-toilette-spray-1-7fl-oz--packshot-default-107450-9564892889118.jpg" alt="Bleu de Chanel">
                 </div>
@@ -115,7 +127,7 @@
                     <p class="produto-descricao">Sofisticado e atemporal, combina frescor cítrico de limão e toranja com base marcante de sândalo, cedro e incenso.</p>
                     <div class="produto-rodape">
                         <span class="produto-preco">R$ 949,00</span>
-                        <button class="btn-card">Adicionar à Sacola</button>
+                        <label for="chk6" class="btn-card">Adicionar à Sacola</label>
                     </div>
                 </div>
             </div>
@@ -123,6 +135,90 @@
         </div>
     </main>
 
+    <!-- ===== CARRINHO ===== -->
+    <section class="carrinho-section" id="carrinho">
+
+        <div class="carrinho-header">
+            <p class="produtos-subtitulo">Resumo</p>
+            <h2 class="produtos-titulo">Sua Sacola</h2>
+            <div class="linha-dourada"></div>
+        </div>
+
+        <div class="carrinho-vazio">
+            <p>Nenhum produto adicionado ainda.</p>
+            <a href="#" class="btn-voltar">Ver Produtos</a>
+        </div>
+
+        <div class="carrinho-lista">
+
+            <div class="carrinho-item" id="item1">
+                <img src="../fotos/LeMale.png" alt="Le Male Elixir">
+                <div class="carrinho-item-info">
+                    <p class="carrinho-marca">Jean Paul Gaultier</p>
+                    <h4 class="carrinho-nome">Le Male Elixir</h4>
+                </div>
+                <span class="carrinho-preco">R$ 600,00</span>
+                <label for="chk1" class="btn-remover">Remover</label>
+            </div>
+
+            <div class="carrinho-item" id="item2">
+                <img src="../fotos/versace.png" alt="Versace Eros">
+                <div class="carrinho-item-info">
+                    <p class="carrinho-marca">Versace</p>
+                    <h4 class="carrinho-nome">Versace Eros</h4>
+                </div>
+                <span class="carrinho-preco">R$ 649,00</span>
+                <label for="chk2" class="btn-remover">Remover</label>
+            </div>
+
+            <div class="carrinho-item" id="item3">
+                <img src="../fotos/Dior.png" alt="Dior Sauvage">
+                <div class="carrinho-item-info">
+                    <p class="carrinho-marca">Dior</p>
+                    <h4 class="carrinho-nome">Sauvage</h4>
+                </div>
+                <span class="carrinho-preco">R$ 850,00</span>
+                <label for="chk3" class="btn-remover">Remover</label>
+            </div>
+
+            <div class="carrinho-item" id="item4">
+                <img src="../fotos/Armani.png" alt="Acqua di Giò">
+                <div class="carrinho-item-info">
+                    <p class="carrinho-marca">Giorgio Armani</p>
+                    <h4 class="carrinho-nome">Acqua di Giò</h4>
+                </div>
+                <span class="carrinho-preco">R$ 720,00</span>
+                <label for="chk4" class="btn-remover">Remover</label>
+            </div>
+
+            <div class="carrinho-item" id="item5">
+                <img src="../fotos/Phanton.png" alt="Phantom">
+                <div class="carrinho-item-info">
+                    <p class="carrinho-marca">Paco Rabanne</p>
+                    <h4 class="carrinho-nome">Phantom</h4>
+                </div>
+                <span class="carrinho-preco">R$ 600,00</span>
+                <label for="chk5" class="btn-remover">Remover</label>
+            </div>
+
+            <div class="carrinho-item" id="item6">
+                <img src="https://www.chanel.com/images/t_one/w_0.51,h_0.51,c_crop/q_auto:good,f_autoplus,fl_lossy,dpr_1.1/w_1240/bleu-de-chanel-eau-de-toilette-spray-1-7fl-oz--packshot-default-107450-9564892889118.jpg" alt="Bleu de Chanel">
+                <div class="carrinho-item-info">
+                    <p class="carrinho-marca">Chanel</p>
+                    <h4 class="carrinho-nome">Bleu de Chanel</h4>
+                </div>
+                <span class="carrinho-preco">R$ 949,00</span>
+                <label for="chk6" class="btn-remover">Remover</label>
+            </div>
+
+        </div>
+
+        <div class="carrinho-finalizar">
+            <button class="btn-finalizar">Finalizar Compra</button>
+        </div>
+
+    </section>
+<!-- ===== RODAPÉ ===== -->
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-col">
@@ -162,6 +258,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 L'Essence Perfumes - Belo Horizonte, MG</p>
+            <p>Desenvolvido por João Pedro Viegas Naves &nbsp;|&nbsp; jpedroviegas2005@gmail.com &nbsp;|&nbsp; (31) 97540-3005</p>
         </div>
     </footer>
 

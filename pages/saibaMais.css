@@ -1,0 +1,354 @@
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+/* ============================================
+   CABEÇÁRIO
+   ============================================ */
+.cabecario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    height: 100px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+    margin-left: -150px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #888;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: color 0.3s ease;
+    margin-right: 50px;
+}
+
+.menu a:hover {
+    color: #d4af37;
+}
+
+
+/* ============================================
+   SEÇÃO SOBRE
+   ============================================ */
+.sobre {
+    display: flex;
+    gap: 80px;
+    padding: 100px 10%;
+    align-items: flex-start;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.sobre-texto {
+    flex: 1.2;
+}
+
+.sobre-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #c5a66d;
+    margin: 0 0 14px 0;
+}
+
+.sobre-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #1a1510;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.sobre-titulo em {
+    color: #c5a66d;
+    font-style: italic;
+}
+
+.linha-dourada {
+    width: 45px;
+    height: 2px;
+    background: #c5a66d;
+    margin-bottom: 30px;
+}
+
+.sobre-paragrafo {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.8;
+    margin: 0 0 20px 0;
+    max-width: 520px;
+}
+
+
+.sobre-missao {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding-top: 10px;
+}
+
+.missao-item {
+    border-left: 2px solid #c5a66d;
+    padding-left: 25px;
+}
+
+.missao-icone {
+    display: block;
+    color: #c5a66d;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.missao-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #1a1510;
+    margin: 0 0 8px 0;
+}
+
+.missao-item p {
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* ============================================
+   SEÇÃO CONTATO / FORMULÁRIO
+   ============================================ */
+.contato {
+    padding: 100px 10%;
+    background-color: #fafafa;
+}
+
+.contato-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contato-header .linha-dourada {
+    margin: 0 auto;
+}
+
+.formulario-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #888;
+}
+
+.campo input,
+.campo textarea {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #1a1510;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.3s ease;
+    resize: none;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-bottom-color: #c5a66d;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #ccc;
+    font-weight: 300;
+}
+
+.btn-enviar {
+    align-self: flex-start;
+    background: #1a1510;
+    color: #fff;
+    padding: 14px 40px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background: #c5a66d;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .sobre {
+        flex-direction: column;
+        gap: 50px;
+        padding: 60px 6%;
+    }
+
+    .cabecario {
+        padding: 0 30px;
+    }
+
+    .titulo {
+        margin-left: 0;
+    }
+
+    .contato {
+        padding: 60px 6%;
+    }
+}
+
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
+.main-footer {
+    background-color: #1a1510;
+    color: #fff;
+    padding: 60px 10% 20px 10%;
+    margin-top: 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    font-family: 'Serif', serif;
+    font-size: 1.8rem;
+    color: #c5a66d;
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    color: #c5a66d;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #bbb;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a,
+.footer-col a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s, padding-left 0.3s;
+}
+
+.footer-col ul li a:hover,
+.footer-col a:hover {
+    color: #c5a66d;
+    padding-left: 5px;
+}
+
+.footer-subscribe {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-subscribe input {
+    background: transparent;
+    border: 1px solid #333;
+    padding: 10px;
+    color: #fff;
+    flex: 1;
+}
+
+.footer-subscribe button {
+    background: #c5a66d;
+    border: none;
+    color: #1a1510;
+    padding: 0 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 50px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 6px;
+    font-size: 0.75rem;
+    color: #444;
+}

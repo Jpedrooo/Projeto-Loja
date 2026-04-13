@@ -8,20 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- ===== CABECARIO ===== -->
     <header class="cabecario">
     <nav class="menu">
         <a href="pages/produtos.html">Produtos</a>
-        <a href="#">Saiba Mais</a>
+        <a href="pages/saibaMais.html">Saiba Mais</a>
     </nav>
 
-    <h1 class="titulo" href="/index.html">L’Essence d’Or</h1>
-
+    <a href="index.html" style="text-decoration: none;">
+        <h1 class="titulo">L'Essence d'Or</h1>
+    </a>
     <nav class="menu">
         <a class="carrinho" href="#">Carrinho</a>
     </nav>
     
 </header>
-
+<!-- ===== BANNER/NOTICIA ===== -->
 <section class="banner news-banner">
     <div class="news-window">
         <div class="news-content">
@@ -34,7 +36,7 @@
         <a href="pages/produtos.html" class="btnBanner">Ver Produtos</a>
     </div>
 </section>
-
+<!-- ===== CATEGORIAS ===== -->
 <section class="categorias">
     <a class="categoria-item" href="pages/produtos.html">
         <span class="icone">🌸</span> <p>Floral</p>
@@ -73,13 +75,13 @@
                 </p>
                 <div class="price-action">
                     <span class="price-tag">R$ 600,00</span>
-                    <button class="btn-primary">Adicionar à Sacola</button>
+                    <button class="btn-primary" onclick="window.location.href='pages/produtos.html'">Adicionar à Sacola</button>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
+<!-- ===== BEST-SALERS ===== -->
 <section class="best-sellers-wide">
     <div class="title-container" style="visibility: hidden;">
         <h2>BEST<br>SELLERS</h2>
@@ -104,12 +106,13 @@
                 </p>
                 <div class="price-action">
                     <span class="price-tag">R$ 949,00</span>
-                    <button class="btn-primary">Adicionar à Sacola</button>
+                    <button class="btn-primary" onclick="window.location.href='pages/produtos.html'">Adicionar à Sacola</button>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- ===== RODAPÉ ===== -->
 <footer class="main-footer">
     <div class="footer-container">
         <div class="footer-col">
@@ -152,8 +155,9 @@
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2026 L'Essence Perfumes - Belo Horizonte, MG</p>
-    </div>
+            <p>&copy; 2026 L'Essence Perfumes - Belo Horizonte, MG</p>
+            <p>Desenvolvido por João Pedro Viegas Naves &nbsp;|&nbsp; jpedroviegas2005@gmail.com &nbsp;|&nbsp; (31) 97540-3005</p>
+        </div>
 </footer>
 
 </body>
