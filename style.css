@@ -1,26 +1,31 @@
+/* ============================================
+   RESET & BASE
+   ============================================ */
 * {
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #fff; /* Fundo limpo */
+    background-color: #fff;
     color: #333;
     margin: 0;
     padding: 0;
     width: 100%;
-    
 }
 
-/*cabecario*/
+
+/* ============================================
+   CABEÇÁRIO
+   ============================================ */
 .cabecario {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 80px; /* Aumentei um pouco o respiro */
-    height: 100px; /* Um pouco mais alto para dar elegância */
+    padding: 0 80px;
+    height: 100px;
     background-color: #fff;
-    border-bottom: 1px solid #f0f0f0; /* Linha bem fininha e discreta */
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .titulo {
@@ -29,71 +34,65 @@ body {
     font-weight: 700;
     font-style: italic;
     color: #1a1a1a;
-    letter-spacing: -1px; /* Letras levemente mais juntas = mais moderno */
+    letter-spacing: -1px;
     margin-left: -150px;
 }
 
 .menu a {
     text-decoration: none;
-    color: #888; /* Cinza mais suave */
+    color: #888;
     font-family: 'Inter', sans-serif;
-    font-size: 0.75rem; /* Menor e mais delicado */
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 3px; /* Espaçamento maior entre letras dá ar de marca premium */
+    letter-spacing: 3px;
     transition: color 0.3s ease;
     margin-right: 50px;
 }
 
-
 .menu a:hover {
-    color: #d4af37; /* Dourado ao passar o mouse */
+    color: #d4af37;
 }
-/*banner*/
+
+
+/* ============================================
+   BANNER
+   ============================================ */
 .banner.news-banner {
     width: 100vw;
     max-width: 100%;
     overflow: hidden;
     height: 700px;
-    background: url('./banner.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
-    /* Centraliza a janela de vidro */
+    background: url('./banner.png') no-repeat center / cover;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 50px;
     position: relative;
-    box-shadow: inset 0 0 100px rgba(0,0,0,0.1);
-    
-    
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.1);
 }
 
 .news-window {
-    background: rgba(255, 255, 240, 0.4); /* Fundo bege suave e semi-transparente */
-    backdrop-filter: blur(15px); /* O verdadeiro efeito de desfoque */
-    -webkit-backdrop-filter: blur(15px); /* Suporte para Safari */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda dourada/branca fininha */
-    border-radius: 60px; /* Formato pílula grande */
-    padding: 60px; /* Espaço interno generoso */
-    max-width: 750px; /* Largura controlada */
-    text-align: center;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombra suave para flutuar */
-    
-    /* Centraliza o conteúdo interno (texto e botão) */
+    background: rgba(255, 255, 240, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 60px;
+    padding: 60px;
+    max-width: 750px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .news-content {
-    /* max-width: 650px; -- Removido, controlado pela janela */
     text-align: center;
-    color: white; /* Texto claro sobre o fundo desfocado */
-    margin-bottom: 40px; /* Espaço menor até o botão */
+    color: white;
+    margin-bottom: 40px;
     line-height: 1.6;
 }
+
 .news-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
@@ -110,32 +109,30 @@ body {
 .news-text {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9); /* Branco mais forte para leitura */
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 300;
     max-width: 500px;
     margin: 0 auto;
 }
+
 .btnBanner {
-    /* Remova o margin-top fixo */
     min-width: 180px;
     text-align: center;
     padding: 14px 40px;
     text-decoration: none;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: all 0.4s ease;
-    
-    /* Seu estilo de botão de vidro anterior, ajustado */
-    background: rgba(255, 255, 240, 0.6); 
+    background: rgba(255, 255, 240, 0.6);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    
-    color: #333; /* Cor de texto escura para contraste */
-    font-weight: bold;
+    color: #333;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 50px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
 .btnBanner:hover {
     background: linear-gradient(135deg, #d4af37, #b8860b);
     color: white;
@@ -144,15 +141,17 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* categorias */
 
+/* ============================================
+   CATEGORIAS
+   ============================================ */
 .categorias {
     display: flex;
-    justify-content: center; /* Centraliza os itens */
+    justify-content: center;
     align-items: center;
-    gap: 120px; /* Espaço grande entre eles para dar ar premium */
+    gap: 120px;
     padding: 80px 0;
-    background-color: #FFFFFF; /* Fundo bem escuro/marrom café igual da foto */
+    background-color: #fff;
     width: 100%;
     border-top: 1px solid #f0f0f0;
 }
@@ -164,16 +163,17 @@ body {
 }
 
 .categoria-item:hover {
-    transform: translateY(-10px); /* Sobe um pouquinho no hover */
+    transform: translateY(-5px);
+}
+
+.categoria-item:hover p {
+    color: #d4af37;
 }
 
 .icone {
-    font-size: 60px; /* Tamanho do ícone */
+    font-size: 60px;
     display: block;
     margin-bottom: 15px;
-    filter: sepia(1) saturate(5) hue-rotate(10deg);
-    color: #d4af37;
-    filter: none; /* Truque para deixar emoji meio dourado */
 }
 
 .categoria-item p {
@@ -181,18 +181,17 @@ body {
     text-transform: uppercase;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-    letter-spacing: 4px; /* Segredo do luxo de novo */
+    letter-spacing: 4px;
     font-weight: 300;
 }
 
-/* Linha dourada embaixo do nome ao passar o mouse */
 .categoria-item p::after {
     content: '';
     display: block;
     width: 0;
     height: 1px;
     background: #d4af37;
-    transition: width .3s;
+    transition: width 0.3s;
     margin: 5px auto 0;
 }
 
@@ -200,15 +199,10 @@ body {
     width: 100%;
 }
 
-/* Efeito de hover */
-.categoria-item:hover {
-    transform: translateY(-5px);
-}
 
-.categoria-item:hover p {
-    color: #d4af37; /* Nome fica dourado no hover */
-}
-/*cards*/
+/* ============================================
+   CARDS / BEST SELLERS
+   ============================================ */
 .best-sellers-wide {
     display: flex;
     align-items: flex-start;
@@ -217,7 +211,6 @@ body {
     background-color: #fff;
 }
 
-/* Título na Esquerda */
 .title-container h2 {
     font-family: 'Serif', serif;
     font-size: 2.5rem;
@@ -233,7 +226,6 @@ body {
     margin-top: 15px;
 }
 
-/* Card Horizontal */
 .horizontal-card {
     flex: 1;
     background: #fdfdfd;
@@ -245,7 +237,7 @@ body {
 
 .horizontal-card:hover {
     transform: scale(1.01);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
 .card-content {
@@ -318,49 +310,37 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 .btn-primary:hover {
     background: #c5a66d;
 }
 
-/* Responsividade Básica */
 @media (max-width: 992px) {
     .best-sellers-wide {
         flex-direction: column;
     }
+
     .card-content {
         flex-direction: column;
         text-align: center;
     }
+
     .product-details {
         padding-left: 0;
         margin-top: 30px;
     }
+
     .price-action {
         justify-content: center;
     }
 }
 
-.best-sellers-wide-second{
-    display: flex;
-    align-items: flex-start;
-    padding: 80px 10%;
-    gap: 50px;
-    background-color: #fff;
-    
-    
-}
-.horizontal-card-second {
-    width: 100%;
-    background: #fdfdfd;
-    border: 1px solid #f0f0f0;
-    position: relative;
-    border-radius: 4px;
-    transition: transform 0.4s ease;
-}
-/*RODAPÉ*/
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
 .main-footer {
     background-color: #1a1510;
     color: #fff;
@@ -384,7 +364,7 @@ body {
 .footer-logo {
     font-family: 'Serif', serif;
     font-size: 1.8rem;
-    color: #c5a66d; /* Dourado */
+    color: #c5a66d;
     margin-bottom: 20px;
 }
 
@@ -411,19 +391,20 @@ body {
     margin-bottom: 12px;
 }
 
-.footer-col ul li a {
+.footer-col ul li a,
+.footer-col a {
     color: #bbb;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: 0.3s;
+    transition: color 0.3s, padding-left 0.3s;
 }
 
-.footer-col ul li a:hover {
+.footer-col ul li a:hover,
+.footer-col a:hover {
     color: #c5a66d;
     padding-left: 5px;
 }
 
-/* Newsletter Input */
 .footer-subscribe {
     display: flex;
     margin-top: 20px;
@@ -446,7 +427,6 @@ body {
     font-weight: bold;
 }
 
-
 .footer-bottom {
     border-top: 1px solid #222;
     margin-top: 50px;
@@ -454,16 +434,4 @@ body {
     text-align: center;
     font-size: 0.8rem;
     color: #666;
-}
-
-.footer-col a {
-    color: #bbb; /* Ou a cor que você preferir (ex: white) */
-    text-decoration: none;
-    transition: 0.3s;
-}
-.footer-col a:visited {
-    color: #bbb;
-}
-.footer-col a:hover {
-    color: #c5a66d; /* Dourado para combinar com o logo */
 }
